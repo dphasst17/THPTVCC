@@ -1,0 +1,24 @@
+body{
+    margin:0;
+
+}
+header{
+    width:100%;
+    height:100px;
+    top:0;
+    left:0;
+    right:0;
+    position:relative;
+}
+.logo img{
+    width:15%;
+    margin:10px 30px;
+    position:absolute;
+}
+.nav{
+    width:30%;
+    height:70px;
+    background-color:rgb(137, 138, 138);
+    border-radius:10px;
+    position:absolute;
+}

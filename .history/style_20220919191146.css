@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    text-decoration:none;
+}
+header{
+    width:100%;
+    height:100px;
+    top:0;
+    left:0;
+    right:0;
+    position:relative;
+}
+.logo img{
+    width:15%;
+    margin:10px 30px;
+    position:absolute;
+}
+.nav{
+    width:90%;
+    height:70px;
+    background-color:rgb(171, 173, 173);
+    border-radius:10px;
+    position:absolute;
+    margin:20px 150px;
+}
+.nav ul li{
+    text-decoration: none;
+}

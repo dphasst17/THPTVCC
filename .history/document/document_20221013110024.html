@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../index.js">
+    <link rel="stylesheet" href="./document.css">
+    <title>Trường THPT Võ Chí Công</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="../img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="../index.html">TRANG CHỦ</a></li>
+                <li><a href="../new/new.html">TIN TỨC</a></li>
+                <li><a href="../document/document.html">VĂN BẢN</a></li>
+                <li><a href="../admissions/admissions.html">TUYỂN SINH</a></li>
+                <li><a href="../index.html">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input placeholder="Search" spellCheck="false"/>
+            <div class="icon-search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"strokeWidth="4" stroke="#fff"/></svg>
+            </div>
+        </div>
+        <div class="user">    
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+            </svg>
+            <div class="user_infor">
+                <a href="../login.html">Login</a>
+            </div>
+        </div>
+        <div class="dark_mode">
+            <div>
+                <button id="dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <button id="light">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM192 0C90.02 .3203 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.8 289.2 .0039 192 0zM288.4 260.1c-15.66 17.85-35.04 46.3-49.05 75.89h-94.61c-14.01-29.59-33.39-58.04-49.04-75.88C75.24 236.8 64 206.1 64 175.1C64 113.3 112.1 48.25 191.1 48C262.6 48 320 105.4 320 175.1C320 206.1 308.8 236.8 288.4 260.1zM176 80C131.9 80 96 115.9 96 160c0 8.844 7.156 16 16 16S128 168.8 128 160c0-26.47 21.53-48 48-48c8.844 0 16-7.148 16-15.99S184.8 80 176 80z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('.user').click(function(){
+                    $('.user_infor').fadeToggle('user_info')
+                })
+            })
+
+            /* Dark - Light mode */
+            $(document).ready(function(){
+                $('#dark').click(function(){
+                    $('body').css("background-color","rgb(119, 120, 120)")
+                    $('.nav, .search, .search>input, .user, #new, #document, #admissions').css("background-color","rgb(103, 102, 102)")
+                    $('.notification').css("background-color","#f4f2f2bd")
+                    $('.nav, .search, .user,#dark, .notification').css("border-style","none")
+                    $('h4').css("color","white")
+                    $('#dark').css("display","none")
+                    $('#light').css("display","block")
+                });
+                $('#light').click(function(){
+                    $('body').css("background-color","rgb(239, 236, 236)")
+                    $('.nav, .search, .search>input, .user, .notification, #new, #document, #admissions, #dark').css("background-color","rgb(247, 246, 246)")
+                    $('.nav, .search, .user,#dark, .notification').css("border-style","solid")
+                    $('.search>input').css("color","#000")
+                    $('h4').css("color","black")
+                    $('#light').css("display","none")
+                    $('#dark').css("display","block")
+                })
+            })
+        </script>
+    </header>
+</body>
+</html>
